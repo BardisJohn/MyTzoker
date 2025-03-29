@@ -1,5 +1,3 @@
-# MyTzoker
-
 # Github basic
 
 # Creating a Repository
