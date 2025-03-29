@@ -39,19 +39,15 @@ def tzokerkleiroseis(url, xlsname):
     kliroseislst = kliroseislst[1:-1]
     kliroseishttplst=[]     #list of http kliroseon
     for s1 in kliroseislst:
-        # print('s1\n', s1)
         s1lst = s1.split('"')
-        # s2 = 'view-source:https://www.mytzoker.gr'+s1lst[1].strip()
         s2 = 'https://www.mytzoker.gr'+s1lst[1].strip()
         kliroseishttplst.append(s2)
-    # print('list of http')
 
     # Για κάθε αρχείο κλήρωσης διαβάζω τους αριθμούς
     # και δημιουργώ την λίστα με ημερομηνία και αριθμούς
     tzokerlst = [[]]
     for httpfile in kliroseishttplst:
         tzoker = []
-        # print(httpfile)
         httpfilelst = httpfile.split('/')
         tzoker.append(httpfilelst[4])
         tzoker.append(httpfilelst[5])
@@ -64,13 +60,11 @@ def tzokerkleiroseis(url, xlsname):
         itemm79lst = itemm79.split()
         for tz in itemm79lst:tzoker.append(tz)
         tzokerlst.append(tzoker)
-        # print(itemm79lst)
-        # print(tzoker)
 
     # save tzoker as csv
-    # print(tzokerlst)
     csvname = xlsname
-    headers = ['Column1', 'Column2', 'Column3']
+    headers = ['Klirosi', 'Date', 'Klirosi', "tzoker1", "tzoker2", "tzoker3",
+               "tzoker4", "tzoker5", "tzoker"]
     with open(csvname, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(headers)
