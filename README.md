@@ -53,3 +53,29 @@ If there are remote branches that no longer exist on GitHub but are still listed
 
 bash
 git remote prune origin
+
+#---------------------------------------------
+###αλλαγή git φακέλλου στο VS code
+🟡 Option A: You Want to Switch to a Completely Different GitHub Project
+
+    Close current folder in VS Code:
+
+        File → Close Folder
+
+    Clone the new GitHub repo:
+
+        In VS Code, open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P on Mac)
+
+        Type Git: Clone, hit Enter
+
+        Paste the new repo’s URL (e.g., https://github.com/username/new-repo.git)
+
+        Choose the folder where it should be cloned
+
+    Open the new project:
+
+        After cloning, VS Code will ask if you want to open it. Click “Open”.
+
+    ✅ You’re now working in the new project
+#------------------------------------------
+
